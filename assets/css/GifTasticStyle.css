@@ -1,13 +1,34 @@
 body {
     background-image: url("../images/gray_jean.png");
+    font-weight: bold;
 }
 
-/* p { float: left;
+/* p { margin-top: 5%;
 
-} */
+}  */
 
 img {
+    position: relative;
     
-    margin-left: 20px;
-    margin-top:20px;
+    /* margin-left: 5%; */
+    /* margin-top:5%; */
+    margin-bottom: 5%;
+}
+
+.animal {
+    margin-right: 0.5%;
+    margin-bottom: 0.5%
+}
+
+/* #addAButton {
+    margin-top: 5%;
+} */
+
+button, #addAnimal {
+    background-color: rgb(134, 167, 206);
+
+}
+
+.row {
+    margin-left: auto;
 }
