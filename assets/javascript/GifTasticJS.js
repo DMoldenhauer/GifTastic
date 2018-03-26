@@ -135,15 +135,15 @@ $(function ()
                 for (var i = 0; i < results.length; i++) {
 
                     // Only taking action if the photo has an appropriate rating
-                    if (results[i].rating !== "r") {
+                    if (results[i].rating == "g" || results[i].rating == "pg") {
                         // Creating a div with the class "item"
-                        var gifDiv = $("#imagesDisplay");
+                        var gifDiv = $("<div class=\"card\">");
 
                         // Storing the result item's rating
                         var rating = results[i].rating;
 
                         // Creating a paragraph tag with the result item's rating
-                        var t = $("<p>").text("Rating: " + rating);
+                        var t = $("<h5 class=\"card-header\">").text("Rating: " + rating);
 
                         // Creating an image tag
                         var animalImage = $("<img>");
@@ -157,7 +157,7 @@ $(function ()
                         animalImage.attr("src", results[i].images.fixed_height_still.url);
                         
                         
-                            //  neeed to add attributes for animatedurl, static url and state
+                            //  need to add attributes for animatedurl, static url and state
 
 
                         // Appending the paragraph and personImage we created to the "gifDiv" div we created
@@ -165,7 +165,7 @@ $(function ()
                         (gifDiv).append(animalImage);
 
                         // Prepending the gifDiv to the "#imagesDisplay" div in the HTML
-                        $("#imagesDisplay").prepend(gifDiv);
+                        $("#imagesDisplay").append(gifDiv);
                     }
                 };
             });
@@ -203,4 +203,3 @@ $(document).on("click", "img", function ()
 });
 
 
-// });
